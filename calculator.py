@@ -9,7 +9,7 @@ class Shape(ABC):
         pass
 
     def __str__(self):
-        return f"{self.name} with area: {self.get_area()}"
+        return f"{self.name} area: {self.get_area()}"
 
     #מתודת קסם שמחברת בין 2 צורות
     def __add__(self,other):

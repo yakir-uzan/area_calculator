@@ -16,4 +16,4 @@ class Triangle(Shape):
         return self.side1 + self.side2 + self.side3
 
     def __str__(self):
-        return f"{self.name} (sides = {self.side1}, {self.side2}, {self.side3}) with area: {self.get_area():.2f} and perimeter: {self.get_perimeter():.2f}"
+        return f"{self.name} (sides = {self.side1}, {self.side2}, {self.side3}) \narea: {self.get_area():.2f} \nperimeter: {self.get_perimeter():.2f}"
