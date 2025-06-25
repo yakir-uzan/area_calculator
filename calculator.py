@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
-    def _init_(self, name="Shape"):
+    def __init__(self, name = "Shape"):
         self.name = name
 
     @abstractmethod
