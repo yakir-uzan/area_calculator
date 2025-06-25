@@ -5,6 +5,7 @@ class Hexagon(Shape):
     def __init__(self, side_length):
         super().__init__(name = "Hexagon")
         self.side_length = side_length
+        self.sides = [side_length] * 6
 
     def get_area(self):
         return (3 * math.sqrt(3) / 2) * (self.side_length ** 2)

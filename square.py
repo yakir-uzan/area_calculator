@@ -3,7 +3,9 @@ from rectangle import Rectangle
 class Square(Rectangle):
     def __init__(self, side):
         super().__init__(side, side)
-        self.name = "Squade"
+        self.name = "Square"
+        self.side = side
+        self.sides = [side] * 4
 
     def __str__(self):
         return (f"{self.name} (side = {self.width}) \n"

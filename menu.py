@@ -54,19 +54,60 @@ def compare_shapes(shape_class, name):
     print("Equal:", a == b)
     print()
 
+def compare_any_shapes():
+    print("\nShape A:")
+    a = choose_and_create_shape()
+    print("\nShape B:")
+    b = choose_and_create_shape()
+    print(f"\nIs A < B? {a < b}")
+    print(f"Is A > B? {a > b}")
+    print(f"Is A == B? {a == b}")
+
+def print_sides():
+    print("\nChoose shape to check number of sides:")
+    shape = choose_and_create_shape()
+    try:
+        print(len(shape))
+    except ValueError as e:
+        print(e)
+
+def choose_and_create_shape():
+    print("1. Rectangle")
+    print("2. Square")
+    print("3. Triangle")
+    print("4. Circle")
+    print("5. Hexagon")
+    sub_choice = input(">> ")
+
+    classes = {
+        "1": Rectangle,
+        "2": Square,
+        "3": Triangle,
+        "4": Circle,
+        "5": Hexagon
+    }
+
+    if sub_choice in classes:
+        return create_shape(classes[sub_choice])
+    else:
+        print("Invalid shape selection.")
+        return choose_and_create_shape()
+
 def show_menu():
     print()
     print("Shape Calculator - Choose an option:")
     while True:
-        print( "\n== Menu ==")
+        print("\n== Menu ==")
         print("1. Rectangle - Area & Perimeter")
         print("2. Square - Area & Perimeter")
         print("3. Triangle - Area & Perimeter")
         print("4. Circle - Area & Perimeter")
         print("5. Hexagon - Area & Perimeter")
         print("6. Add two shapes")
-        print("7. Compare two shapes")
-        print("8. Exit")
+        print("7. Compare two shapes of same type")
+        print("8. Compare any two shapes")
+        print("9. Show number of sides")
+        print("10. Exit")
         print()
         choice = input("Select an option: ")
 
@@ -142,6 +183,12 @@ def show_menu():
                 print("Invalid shape selection.")
 
         elif choice == "8":
+            compare_any_shapes()
+
+        elif choice == "9":
+            print_sides()
+
+        elif choice == "10":
             print("Goodbye.")
             break
 

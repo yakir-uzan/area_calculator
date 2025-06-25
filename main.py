@@ -8,10 +8,10 @@ from menu import show_menu
 
 def main():
     # מימוש מלבן
-    rect = Rectangle(5, 10)
+    rect = Rectangle(5, 5)
 
     #מימוש ריבוע
-    squa = Square(4)
+    squa = Square(5)
 
     #מימוש משולש
     trian = Triangle(3,5,5)
@@ -21,6 +21,7 @@ def main():
 
     #מימוש משושה
     hexa = Hexagon(7)
+
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@ class Triangle(Shape):
         self.side1 = side1
         self.side2 = side2
         self.side3 = side3
+        self.sides = [side1,side2,side3]
 
     def get_area(self):
         s = self.get_perimeter() / 2
