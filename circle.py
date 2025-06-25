@@ -5,6 +5,7 @@ class Circle(Shape):
     def __init__(self, radius):
         super().__init__(name = "circle")
         self.radius = radius
+        self.side = 0
 
     def get_area(self):
         return math.pi * self.radius ** 2
@@ -14,4 +15,8 @@ class Circle(Shape):
 
     def __str__(self):
         return f"{self.name} (radius = {self.radius}) \narea: {self.get_area():.2f}, \nperimeter: {self.get_perimeter():.2f}"
+
+    def __len__(self):
+        raise ValueError("Sorry, a circle has no sides...")
+
 
