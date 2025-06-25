@@ -1,8 +1,8 @@
 from rectangle import Rectangle
 
 class Triangle(Rectangle):
-    def _init_(self,base, height):
-        super()._init_(base, height)
+    def __init__(self,base, height):
+        super().__init__(base, height)
         self.name = "Triangle"
 
     def get_area(self):
