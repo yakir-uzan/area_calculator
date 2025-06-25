@@ -26,6 +26,12 @@ def main():
     hexa = Hexagon(7)
     print(hexa)
 
+    #מימוש חיבור בין 2 צורות
+    print(trian + circ)
+
+    #מימוש השוואה בין 2 צורות
+    print(squa == trian)
+
 
 if __name__ == "__main__":
     main()
