@@ -13,5 +13,5 @@ class Circle(Shape):
         return 2 * math.pi * self.radius
 
     def __str__(self):
-        return f"{self.name} (radius = {self.radius}) with area: {self.get_area():.2f}, perimeter: {self.get_perimeter():.2f}"
+        return f"{self.name} (radius = {self.radius}) \narea: {self.get_area():.2f}, \nperimeter: {self.get_perimeter():.2f}"
 
