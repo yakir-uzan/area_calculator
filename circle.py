@@ -9,5 +9,9 @@ class Circle(Shape):
     def get_area(self):
         return math.pi * self.radius ** 2
 
+    def get_perimeter(self):
+        return 2 * math.pi * self.radius
+
     def __str__(self):
-        return f"{self.name} (radius = {self.radius}) with area: {self.get_area():.2f}"
+        return f"{self.name} (radius = {self.radius}) with area: {self.get_area():.2f}, perimeter: {self.get_perimeter():.2f}"
+
